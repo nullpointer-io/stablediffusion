@@ -4,7 +4,7 @@ Use Stable Diffusion AI to create an image from a textual description.
 ## Disclaimers
 
 This script is without bells and whistles and has been used:
-- on a Linux operation system 
+- on a Linux operating system 
 - with Python 3.9.7 
 - together with Nvidia GPU RTX 3060 (12 GB GPU RAM)
 - and 15 GB RAM.
