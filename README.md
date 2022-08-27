@@ -52,7 +52,9 @@ huggingface-cli login
 ```
 When prompted paste your user token created before. Don't be irritated when the pasted token is not visible on the command line. 
 
-**Be warned for the initial run** of the script. Gigabytes of data will be downloaded at first. 
+**Be warned:** For the initial run of the script gigabytes of data will be downloaded at first. Take the opportunity and drink some coffee in the meantime. 
+
+### Mind the GPU RAM
 
 Based on your amount of GPU RAM there are to options to execute the script. 
 
