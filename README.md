@@ -9,7 +9,7 @@ This script is without bells and whistles and has been used:
 - together with Nvidia GPU RTX 3060 (12 GB GPU RAM)
 - and 15 GB RAM.
 
-**Note**: If the process of generating the image dies then it was running out of workstation memory. Maybe closing some other programs can free enough memory to avoid this. Observe your memory with htop or top when necessary.
+**Note**: If the process of generating the image dies then it was running out of memory. Maybe closing some other programs can free enough memory to avoid it. Observe your memory with **htop** or **top** when necessary.
 
 ## Prerequisites
 
