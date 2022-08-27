@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
 import fire
-import torch
-from torch import autocast
+import re
 from diffusers import StableDiffusionPipeline
+import torch
+import unicodedata
 
 MODEL = "CompVis/stable-diffusion-v1-4"
 GPU = "cuda"
@@ -26,16 +27,18 @@ def slugify(value, allow_unicode=False):
 
 def main(textinput, over10gb=True):
 
-    fp16args = {}
+    fp16args = dict()
     if not over10gb:
-        fp16args = { "torch_dtype": torch.float16, "revision": "fp16" }  
+        fp16args = {"torch_dtype": torch.float16, "revision": "fp16"}  # pylint: disable=no-member
 
     pipe = StableDiffusionPipeline.from_pretrained(MODEL, use_auth_token=True, **fp16args)
     pipe = pipe.to(GPU)
 
-    with autocast("cuda"):
+    with torch.autocast(GPU):
         image = pipe(textinput, guidance_scale=7.5)["sample"][0] 
-    image.save(f"{slugify(textinput)}.png")
+    imgname = f"{slugify(textinput)}.png"
+    image.save(imgname)
+    print(f"SUCCESS: image: {imgname}")
 
 if __name__ == '__main__':
     fire.Fire(main)
