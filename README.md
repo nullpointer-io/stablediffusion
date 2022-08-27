@@ -1,5 +1,12 @@
 # stablediffusion-script
-Script to use Stable Diffusion AI and create images from a textual description.
+Use Stable Diffusion AI to create an image from a textual description.
+
+## Disclaimers
+
+This script is without bells and whistles and has been used:
+- on a Linux operation system 
+- with Python 3.9.7 
+- and Nvidia GPU RTX 3060 (12 GB GPU RAM).
 
 ## Prerequisites
 
@@ -13,11 +20,28 @@ Now you are ready for your workstation. This script expects that your workstatio
 
 ## Install
 
+Download repository from Github:
+`git clone ` 
+
+Change into the directory of the cloned Git repro: 
+`cd ./stablediffusion-script`
+
+Install Python libraries.
 `pip install requirements.txt`
 
-* Note: The script is running successfully with Python 3.9.7.
-* Recommendation:  To avoid clutter of Python libraries on your workstation you should use tools like pyenv and/or pipenv.  
+**Recommendation**: To avoid clutter of Python libraries on your workstation you should use tools like pyenv and/or pipenv.  
 
 ## Execute
 
+Login to huggingface.co by the using the huggingface-cli. 
+`huggingface-cli login`
+When prompted then paste your user token from the prerequisites chapter. Don't be irritated when the pasted token is not visible on the command line. 
+
+Create image from text.
+`./stablediffusion.py "What happened to Il signor Rossi cerca la felicità"`
+
+For an Cuda GPU with less then 10 GB RAM.
+`./stablediffusion.py "What happened to Il signor Rossi cerca la felicità"` over10gb=False
+
+IMPORTANT: At the initial run gigabytes of data will be downloaded at first. 
 
