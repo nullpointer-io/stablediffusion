@@ -36,9 +36,9 @@ cd ./tryout-stablediffusion
 Install Python libraries dependent on the CUDA version of your GPU. In case of CUDA version 11.x there will be a download of a CUDA specific torch version. The size for version 11.6 has been around 2 GB.
 When using the proprietary drivers from Nvidia on Linux the CUDA version can be evaluated with `nvidia-smi`.
 ```
-pip install -r requirements.cuda116.txt	 # CUDA 11.6 
-pip install -r requirements.cuda113.txt # CUDA 11.3
-pip install -r requirements.cuda102.txt # CUDA 10.2
+pip install -r requirements.cuda116.txt	  # CUDA 11.6 
+pip install -r requirements.cuda113.txt   # CUDA 11.3
+pip install -r requirements.cuda102.txt   # CUDA 10.2
 ```
 
 **Recommendation**
@@ -70,7 +70,7 @@ b. Create image from text with GPU less than 10 GB RAM.
 The image quality and output can be controlled by parameters:
 ```
 --steps=STEPS	(Default: 15) 	-> Number of Inference Steps  
---seed=SEED 	(Default: 1024) -> Generator Seed
+--seed=SEED 	(Default: 1024) -> Manual Generator Seed
 --manualseed=MANUALSEED (Default: True) -> Enable or Disable the Manual Generator Seed
 --scale=SCALE 	(Default: 7.5) 	-> Guidance Scale
 ```
@@ -80,9 +80,7 @@ Example:
 ./stablediffusion.py "a photograph of an astronaut riding a horse" --steps=50 --manualseed=False
 ```
 
-In reference [^2] the parameters are described more in detail. 
-
-## References
+In reference [^2] the parameters are described in detail. 
 
 [^1]: https://huggingface.co/CompVis/stable-diffusion-v1-4
 [^2]: https://huggingface.co/blog/stable_diffusion
