@@ -50,7 +50,7 @@ huggingface-cli login
 ```
 When prompted paste your user token which has been created before. Don't be irritated when the pasted token is not visible on the command line. 
 
-**Be warned:** For the initial run of the script gigabytes of data will be downloaded. Take the opportunity and grab some coffee, water or tea. 
+**Be warned:** For the initial run gigabytes of data will be downloaded. Take the opportunity and grab some coffee, water or tea. 
 
 ### GPU RAM
 
