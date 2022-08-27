@@ -35,7 +35,8 @@ Install Python libraries.
 pip install requirements.txt
 ```
 
-**Recommendation**: To avoid clutter of Python libraries on your workstation you should use tools like pyenv and/or pipenv.  
+**Recommendation**
+To avoid clutter of Python libraries on your workstation you should use tools like pyenv and/or pipenv.  
 
 ## Execute
 
@@ -55,5 +56,6 @@ For an Cuda GPU with less then 10 GB RAM.
 ./stablediffusion.py "What happened to Il signor Rossi cerca la felicità"` over10gb=False
 ```
 
-IMPORTANT: At the initial run gigabytes of data will be downloaded at first. 
+**IMPORTANT**
+At the initial run gigabytes of data will be downloaded at first. 
 
