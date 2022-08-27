@@ -1,5 +1,5 @@
 # tryout-stablediffusion
-Use Stable Diffusion AI to create an image from a textual description.
+Simple script to tryout the Stable Diffusion AI to create an image from a textual description.
 
 ## Disclaimers
 
@@ -33,16 +33,14 @@ Change into the directory:
 cd ./tryout-stablediffusion
 ```
 
-Install the necessary Python libraries. Use the ones matching the CUDA version of your GPU. In case of CUDA version 11.x there will be a download of the torch library as a CUDA specific version. The size for version 11.6 has been around 2 GB.
-When using the proprietary drivers from Nvidia on Linux the CUDA version can be evaluated with `nvidia-smi`.
+Install the necessary Python libraries. They include the torch library which must be matched with the CUDA version of your GPU. The size for the CUDA 11.x specific torch version is around 2 GB. In case of the proprietary Nvidia drivers on Linux the CUDA version can be evaluated with `nvidia-smi`.
 ```
 pip install -r requirements.cuda116.txt	  # CUDA 11.6 
 pip install -r requirements.cuda113.txt   # CUDA 11.3
 pip install -r requirements.cuda102.txt   # CUDA 10.2
 ```
 
-**Recommendation**
-To avoid clutter of Python libraries on your workstation you should use tools like pyenv and/or pipenv.  
+**Recommendation:** To avoid clutter of Python libraries on your workstation you should use tools like pyenv and/or pipenv.  
 
 ## Execute
 
