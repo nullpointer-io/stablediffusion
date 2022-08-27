@@ -1,4 +1,4 @@
-# stablediffusion-script
+# tryout-stablediffusion
 Use Stable Diffusion AI to create an image from a textual description.
 
 ## Disclaimers
