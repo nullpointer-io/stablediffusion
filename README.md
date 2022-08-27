@@ -14,12 +14,12 @@ This script is without bells and whistles and has been used:
 ## Prerequisites
 
 1. Register at https://huggingface.co/ and confirm your registration with the link sent by email.
-2. Log-in to huggingface.co and head over to following AI model: https://huggingface.co/CompVis/stable-diffusion-v1-4
+2. Log-in to huggingface.co and access following AI model: https://huggingface.co/CompVis/stable-diffusion-v1-4
 3. Confirm the license of this model. The license ensures that output of the AI model is not used in an irresponsible way.  
-4. Got to the user settings on huggingface.co and generate a user token. Secure this token locally. For example, you can use a password manager. 
-5. Optional: Before leaving the huggingface.co web page, you may join a user group (organization) to share resources.
+4. Go to your profile settings on huggingface.co and generate a user token. Secure this token locally. For example, use a password manager. 
+5. Optional: Before leaving huggingface.co, you may join a user group (organization) to share resources.
 
-Now you are ready for your workstation. This script expects that your workstation has a GPU with CUDA abilities.
+Now you are ready for your the command line. This script expects that your computer has a GPU with CUDA abilities.
 
 ## Install
 
