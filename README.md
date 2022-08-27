@@ -22,7 +22,7 @@ Now you are ready for your workstation. This script expects that your workstatio
 
 Download this repository from Github:
 ```
-git clone
+git clone https://github.com/nullpointer-io/tryout-stablediffusion.git
 ``` 
 
 Change into the directory: 
