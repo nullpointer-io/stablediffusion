@@ -40,7 +40,7 @@ To avoid clutter of Python libraries on your workstation you should use tools li
 
 ## Execute
 
-Log-in to huggingface.co by the using the huggingface-cli. 
+Log-in to huggingface.co by the using the huggingface cli. 
 ```
 huggingface-cli login
 ```
