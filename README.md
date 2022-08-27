@@ -40,13 +40,15 @@ To avoid clutter of Python libraries on your workstation you should use tools li
 
 ## Execute
 
-Log-in to huggingface.co by the using the huggingface cli. 
+Log-in to huggingface.co by the using the huggingface command line program. 
 ```
 huggingface-cli login
 ```
-When prompted then paste your user token from the prerequisites chapter. Don't be irritated when the pasted token is not visible on the command line. 
+When prompted paste your user token created before. Don't be irritated when the pasted token is not visible on the command line. 
 
-Based on your amount of GPU RAM there are to options to execute the script. But **be warned for the initial run** of the script. Gigabytes of data will be downloaded at first.  
+**Be warned for the initial run** of the script. Gigabytes of data will be downloaded at first.  
+
+Based on your amount of GPU RAM there are to options to execute the script. 
 
 a. Create image from text with GPU over 10 GB RAM.
 ```
@@ -54,7 +56,7 @@ a. Create image from text with GPU over 10 GB RAM.
 ```
 b. Create image from text with GPU less than 10 GB RAM. 
 ```
-./stablediffusion.py "What happened to Il signor Rossi cerca la felicità"` over10gb=False
+./stablediffusion.py "What happened to Il signor Rossi cerca la felicità"` --less10gb=True
 ```
 
 ## References
