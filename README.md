@@ -1,5 +1,5 @@
 # tryout-stablediffusion
-Simple script to tryout the Stable Diffusion AI to create an image from a textual description.
+Simple script to explore the Stable Diffusion AI to create an image from a textual description.
 
 ## Disclaimers
 
