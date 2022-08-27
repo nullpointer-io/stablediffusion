@@ -56,7 +56,7 @@ a. Create image from text with GPU over 10 GB RAM.
 ```
 b. Create image from text with GPU less than 10 GB RAM. 
 ```
-./stablediffusion.py "What happened to Il signor Rossi cerca la felicità"` --less10gb=True
+./stablediffusion.py "What happened to Il signor Rossi cerca la felicità"` --over10gb=False
 ```
 
 ## References
