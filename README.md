@@ -14,7 +14,7 @@ This script is without bells and whistles and has been used:
 ## Prerequisites
 
 1. Register at https://huggingface.co/ and confirm your registration with the link sent by email.
-2. Log-in to huggingface.co and access the AI model: https://huggingface.co/CompVis/stable-diffusion-v1-4
+2. Login to huggingface.co and access the AI model: https://huggingface.co/CompVis/stable-diffusion-v1-4
 3. Confirm the license of this model. The license ensures that output of the AI model is not used in an irresponsible way.  
 4. Go to your profile settings on huggingface.co and generate a user token. Secure this token locally. For example, use a password manager. 
 5. Optional: Before leaving huggingface.co, you may join a user group (organization) to share resources.
@@ -44,23 +44,23 @@ pip install -r requirements.cuda102.txt   # CUDA 10.2
 
 ## Execute
 
-Log-in to huggingface.co by the using the huggingface command line program. 
+Login to huggingface.co via the huggingface command line interface. 
 ```
 huggingface-cli login
 ```
-When prompted paste your user token created before. Don't be irritated when the pasted token is not visible on the command line. 
+When prompted paste your user token which has been created before. Don't be irritated when the pasted token is not visible on the command line. 
 
-**Be warned:** For the initial run of the script gigabytes of data will be downloaded at first. Take the opportunity and grab some coffee, water or tea. 
+**Be warned:** For the initial run of the script gigabytes of data will be downloaded. Take the opportunity and grab some coffee, water or tea. 
 
-### Mind the GPU RAM
+### GPU RAM
 
-Based on your amount of GPU RAM there are to options to execute the script. 
+Based on your amount of GPU RAM there are two options to execute the script. 
 
-a. Create image from text with GPU over 10 GB RAM.
+a. Create an image with a GPU over 10 GB RAM.
 ```
 ./stablediffusion.py "a photograph of an astronaut riding a horse"
 ```
-b. Create image from text with GPU less than 10 GB RAM. 
+b. Create an image with a GPU less than 10 GB RAM. 
 ```
 ./stablediffusion.py "a photograph of an astronaut riding a horse" --over10gb=False
 ```
@@ -79,7 +79,6 @@ Example:
 ```
 ./stablediffusion.py "a photograph of an astronaut riding a horse" --steps=50 --manualseed=False
 ```
-
 In reference [^2] the parameters are described in detail. 
 
 ## References
