@@ -24,7 +24,7 @@ def slugify(value, allow_unicode=False):
     value = re.sub(r'[^\w\s-]', '', value.lower())
     return re.sub(r'[-\s]+', '-', value).strip('-_')
 
-def main(prompt, over10gb=True):
+def main(textinput, over10gb=True):
 
     fp16args = {}
     if not over10gb:
@@ -34,8 +34,8 @@ def main(prompt, over10gb=True):
     pipe = pipe.to(GPU)
 
     with autocast("cuda"):
-        image = pipe(prompt, guidance_scale=7.5)["sample"][0] 
-    image.save(f"{slugify(prompt)}.png")
+        image = pipe(textinput, guidance_scale=7.5)["sample"][0] 
+    image.save(f"{slugify(textinput)}.png")
 
 if __name__ == '__main__':
     fire.Fire(main)
