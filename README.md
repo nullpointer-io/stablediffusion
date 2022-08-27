@@ -33,7 +33,7 @@ Change into the directory:
 cd ./tryout-stablediffusion
 ```
 
-Install Python libraries dependent on the CUDA version of your GPU. In case of CUDA version 11.x there will be a download of a CUDA specific torch version. The size for version 11.6 has been around 2 GB.
+Install the necessary Python libraries. Use the ones matching the CUDA version of your GPU. In case of CUDA version 11.x there will be a download of the torch library as a CUDA specific version. The size for version 11.6 has been around 2 GB.
 When using the proprietary drivers from Nvidia on Linux the CUDA version can be evaluated with `nvidia-smi`.
 ```
 pip install -r requirements.cuda116.txt	  # CUDA 11.6 
