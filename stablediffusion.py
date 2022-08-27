@@ -25,11 +25,11 @@ def slugify(value, allow_unicode=False):
     return re.sub(r'[-\s]+', '-', value).strip('-_')
 
 def main(prompt, over10gb=True):
-   
+
     fp16args = {}
     if not over10gb:
         fp16args = { "torch_dtype": torch.float16, "revision": "fp16" }  
-    
+
     pipe = StableDiffusionPipeline.from_pretrained(MODEL, use_auth_token=True, **fp16args)
     pipe = pipe.to(GPU)
 
