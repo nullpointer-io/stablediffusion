@@ -17,7 +17,7 @@ This script is without bells and whistles and has been used:
 2. Log-in to huggingface.co and head over to following AI model: https://huggingface.co/CompVis/stable-diffusion-v1-4
 3. Confirm the license of this model. The license ensures that output of the AI model is not used in an irresponsible way.  
 4. Got to the user settings on huggingface.co and generate a user token. Secure this token locally. For example, you can use a password manager. 
-5. Optional: Before leaving the huggingface.co web page, you may join an user group (organization) to share resources.
+5. Optional: Before leaving the huggingface.co web page, you may join a user group (organization) to share resources.
 
 Now you are ready for your workstation. This script expects that your workstation has a GPU with CUDA abilities.
 
