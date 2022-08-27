@@ -11,7 +11,7 @@ This script is without bells and whistles and has been used:
 ## Prerequisites
 
 1. Register at https://huggingface.co/ and confirm your registration with the link sent by email.
-2. Login to huggingface.co and head over to following AI model: https://huggingface.co/CompVis/stable-diffusion-v1-4
+2. Log-in to huggingface.co and head over to following AI model: https://huggingface.co/CompVis/stable-diffusion-v1-4
 3. Confirm the license of this model. The license ensures that output of the AI model is not used in an irresponsible way.  
 4. Got to the user settings on huggingface.co and generate a user token. Secure this token locally. For example, you can use a password manager. 
 5. Optional: Before leaving the huggingface.co web page, you may join an user group (organization) to share resources.
@@ -27,7 +27,7 @@ git clone https://github.com/nullpointer-io/tryout-stablediffusion.git
 
 Change into the directory: 
 ```
-cd ./stablediffusion-script
+cd ./tryout-stablediffusion
 ```
 
 Install Python libraries.
@@ -40,22 +40,25 @@ To avoid clutter of Python libraries on your workstation you should use tools li
 
 ## Execute
 
-Login to huggingface.co by the using the huggingface-cli. 
+Log-in to huggingface.co by the using the huggingface-cli. 
 ```
 huggingface-cli login
 ```
 When prompted then paste your user token from the prerequisites chapter. Don't be irritated when the pasted token is not visible on the command line. 
 
-Create image from text.
+Based on your amount of GPU RAM there are to options to execute the script. But **be warned for the initial run** of the script. Gigabytes of data will be downloaded at first.  
+
+a. Create image from text with GPU over 10 GB RAM.
 ```
 ./stablediffusion.py "What happened to Il signor Rossi cerca la felicità"
 ```
-
-For an Cuda GPU with less then 10 GB RAM.
+b. Create image from text with GPU less than 10 GB RAM. 
 ```
 ./stablediffusion.py "What happened to Il signor Rossi cerca la felicità"` over10gb=False
 ```
 
-**IMPORTANT**
-At the initial run gigabytes of data will be downloaded at first. 
+## References
 
+- https://www.heise.de/news/Text-zu-Bild-Revolution-Stable-Diffusion-ermoeglicht-KI-Bildgenerieren-fuer-alle-7244307.html
+- https://huggingface.co/CompVis/stable-diffusion-v1-4
+- https://huggingface.co/blog/stable_diffusion
