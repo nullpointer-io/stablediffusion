@@ -25,20 +25,30 @@ def slugify(value, allow_unicode=False):
     value = re.sub(r'[^\w\s-]', '', value.lower())
     return re.sub(r'[-\s]+', '-', value).strip('-_')
 
-def main(textinput, over10gb=True):
+def main(textinput, steps=15, manualseed=True, seed=1024, scale=7.5, over10gb=True):
 
     fp16args = dict()
     if not over10gb:
         fp16args = {"torch_dtype": torch.float16, "revision": "fp16"}  # pylint: disable=no-member
 
-    pipe = StableDiffusionPipeline.from_pretrained(MODEL, use_auth_token=True, **fp16args)
+    if not manualseed:
+        generator = torch.Generator(GPU).seed() # pylint: disable=no-member
+    else:
+        generator = torch.Generator(GPU).manual_seed(seed)  # pylint: disable=no-member
+    pipe = StableDiffusionPipeline.from_pretrained(MODEL, generator=generator, guidance_scale=scale,
+                                                   num_inference_steps=steps, use_auth_token=True, 
+                                                   **fp16args)
     pipe = pipe.to(GPU)
 
     with torch.autocast(GPU):
-        image = pipe(textinput, guidance_scale=7.5)["sample"][0] 
+        result = pipe(textinput) 
+        print(f"Result: {result}")
+        #image = pipe(textinput, guidance_scale=7.5)["sample"][0] 
+        img = result["sample"][0]
+    
     imgname = f"{slugify(textinput)}.png"
-    image.save(imgname)
-    print(f"SUCCESS: image: {imgname}")
+    img.save(imgname)
+    print(f"SUCCESS: {imgname}")
 
 if __name__ == '__main__':
     fire.Fire(main)

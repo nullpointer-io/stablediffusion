@@ -1,0 +1,7 @@
+-i https://download.pytorch.org/whl/cu113
+torch
+diffusers==0.2.4
+fire
+ftfy
+scipy
+transformers
