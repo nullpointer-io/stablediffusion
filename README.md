@@ -65,7 +65,7 @@ b. Create image from text with GPU less than 10 GB RAM.
 ./stablediffusion.py "a photograph of an astronaut riding a horse" --over10gb=False
 ```
 
-### Furhter Parameters
+### Parameters
 
 The image quality and output can be controlled by parameters:
 ```
@@ -80,8 +80,13 @@ Example:
 ./stablediffusion.py "a photograph of an astronaut riding a horse" --steps=50 --manualseed=False
 ```
 
-In reference [^2] the parameters are described in detail. Further information can be found in links [^1] and German article [^3].
+In reference [^2] the parameters are described in detail. 
+
+## References
+
+This script is based on information from the references [^1] [^2] [^3] [^4].
 
 [^1]: https://huggingface.co/CompVis/stable-diffusion-v1-4
 [^2]: https://huggingface.co/blog/stable_diffusion
 [^3]: https://www.heise.de/news/Text-zu-Bild-Revolution-Stable-Diffusion-ermoeglicht-KI-Bildgenerieren-fuer-alle-7244307.html
+[^4]: https://pytorch.org/get-started/locally/
