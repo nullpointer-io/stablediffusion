@@ -59,6 +59,6 @@ b. Create image from text with GPU less than 10 GB RAM.
 
 ## References
 
-- https://www.heise.de/news/Text-zu-Bild-Revolution-Stable-Diffusion-ermoeglicht-KI-Bildgenerieren-fuer-alle-7244307.html
 - https://huggingface.co/CompVis/stable-diffusion-v1-4
 - https://huggingface.co/blog/stable_diffusion
+- https://www.heise.de/news/Text-zu-Bild-Revolution-Stable-Diffusion-ermoeglicht-KI-Bildgenerieren-fuer-alle-7244307.html
