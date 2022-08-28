@@ -34,8 +34,8 @@ Change into the directory:
 cd ./tryout-stablediffusion
 ```
 
-Install the necessary Python libraries. The incorporated torch library must be matched with the CUDA version of your GPU. Hint: The 
-size of the torch library for CUDA 11.6 for example is around 2 GB.
+Install the necessary Python libraries. The incorporated torch library must be matched with the CUDA version of your GPU. Note: The 
+size of the torch library for CUDA 11.6 is around 2 GB for example.
 ```
 pip install -r requirements.cuda116.txt	  # CUDA 11.6 
 pip install -r requirements.cuda113.txt   # CUDA 11.3
@@ -71,8 +71,8 @@ b. Create an image with a GPU less than 10 GB RAM.
 ### Output
 
 Images are stored as PNG files into the subdirectory **collected**. The used parameter set for the image generation is written 
-to a CSV file. The CSV file resides in the same directory like the images. The prefix of an image file corresponds to the 
-related index in the CSV file.
+to CSV. The CSV file resides in the same directory like the images. The prefix of an image file corresponds to the index
+in the CSV file.
 
 ### Parameters
 
