@@ -72,7 +72,12 @@ b. Create an image with a GPU less than 10 GB RAM.
 
 Images are stored as PNG files into the subdirectory **collected**. The used parameter set for the image generation is written 
 to CSV. The CSV file resides in the same directory like the images. The prefix of an image file corresponds to the index
-in the CSV file.
+in the CSV file. In this way every image is preserved and will not be overwritten. 
+
+Thus it is possible to easily create series of images:
+```
+for i in $(seq 1 50); do ./stablediffusion.py "a chair in the shape of an avacado" --steps=$i; done
+```
 
 ### Parameters
 
