@@ -1,5 +1,6 @@
 diffusers==0.2.4
 fire
 ftfy
+pandas
 scipy
 transformers
