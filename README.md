@@ -15,7 +15,7 @@ This script is without bells and whistles and has been used:
 
 1. Register at https://huggingface.co/ and confirm your registration with the link sent by email.
 2. Login to huggingface.co and access the AI model: https://huggingface.co/CompVis/stable-diffusion-v1-4
-3. Confirm the license of this model. The license ensures that output of the AI model is not used in an irresponsible way.  
+3. Confirm the license of the model. The license ensures that output of the AI model is not used in an irresponsible way.  
 4. Go to your profile settings on huggingface.co and generate a user token. Secure this token locally. For example, use a password manager. 
 5. Optional: Before leaving huggingface.co, you may join a user group (organization) to share resources.
 
