@@ -17,6 +17,8 @@ enough memory to avoid it. Observe your memory with **htop** or **top** when nec
 
 ## Prerequisites
 
+Before pulling files from obscure internet sources it is worthwhile to follow the instructions of the original Stable Diffuser project. There are not too many steps to accomplish and it is easily done.
+
 1. Register at https://huggingface.co/ and confirm your registration with the link sent by email.
 2. Login to huggingface.co and access the AI model: https://huggingface.co/CompVis/stable-diffusion-v1-4
 3. Confirm the license of the model. The license ensures that output of the AI model is not used in an irresponsible way.
