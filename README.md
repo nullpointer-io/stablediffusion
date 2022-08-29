@@ -96,7 +96,7 @@ The image quality and output can be controlled by parameters:
 
 Example:
 ```
-./text2image.py "a chair in the shape of an avacadoe" --steps=50 --scale=2.5 --manualseed=False
+./text2image.py "a chair in the shape of an avacado" --steps=50 --scale=2.5 --manualseed=False
 ```
 In reference [^2] the parameters are described in detail. 
 
