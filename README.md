@@ -1,5 +1,5 @@
-# tryout-stablediffusion
-Simple script to explore the Stable Diffusion AI to create an image from a textual description.
+# stablediffusion
+Script to use the Stable Diffusion AI to create an image from a textual description.
 
 ## Disclaimers
 
@@ -31,7 +31,7 @@ git clone https://github.com/nullpointer-io/tryout-stablediffusion.git
 
 Change into the directory: 
 ```
-cd ./tryout-stablediffusion
+cd ./stablediffusion
 ```
 
 Install the necessary Python libraries. The incorporated torch library must be matched with the CUDA version of your GPU. Note: The 
@@ -61,11 +61,11 @@ Based on your amount of GPU RAM there are two options to execute the script.
 
 a. Create an image with a GPU over 10 GB RAM.
 ```
-./stablediffusion.py "a chair in the shape of an avacado"
+./text2image.py "a chair in the shape of an avacado"
 ```
 b. Create an image with a GPU less than 10 GB RAM. 
 ```
-./stablediffusion.py "a chair in the shape of an avacado" --over10gb=False
+./text2image.py "a chair in the shape of an avacado" --over10gb=False
 ```
 
 ### Output
@@ -76,7 +76,7 @@ in the CSV file. In this way every image is preserved and will not be overwritte
 
 Thus it is possible to easily create series of images:
 ```
-for i in $(seq 1 50); do ./stablediffusion.py "a chair in the shape of an avacado" --steps=$i; done
+for i in $(seq 1 50); do ./text2image.py "a chair in the shape of an avacado" --steps=$i; done
 ```
 
 ### Parameters
@@ -91,7 +91,7 @@ The image quality and output can be controlled by parameters:
 
 Example:
 ```
-./stablediffusion.py "a chair in the shape of an avacadoe" --steps=50 --scale=2.5 --manualseed=False
+./text2image.py "a chair in the shape of an avacadoe" --steps=50 --scale=2.5 --manualseed=False
 ```
 In reference [^2] the parameters are described in detail. 
 
