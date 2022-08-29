@@ -3,11 +3,14 @@ Script to use the Stable Diffusion AI to create an image from a textual descript
 
 ## Disclaimers
 
-This script is without bells and whistles and has been used:
-- on a Linux operating system 
-- with Python 3.9.7 
-- together with Nvidia GPU RTX 3060 (12 GB GPU RAM)
-- and 15 GB RAM.
+This script is without bells and whistles. But it has some features like:
+- Collecting images in a directory and store accompanying information in a CSV file.  
+
+I have used this script:
+- On a Linux operating system 
+- With Python 3.9.7 
+- Together with Nvidia GPU RTX 3060 (12 GB GPU RAM)
+- And 15 GB RAM.
 
 **Note**: If the process of generating the image dies then it was running out of memory. Maybe closing some other programs can free 
 enough memory to avoid it. Observe your memory with **htop** or **top** when necessary.
