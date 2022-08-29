@@ -26,7 +26,7 @@ Now you are ready for your the command line. This script expects that your compu
 
 Download this repository from Github:
 ```
-git clone https://github.com/nullpointer-io/tryout-stablediffusion.git
+git clone https://github.com/nullpointer-io/stablediffusion.git
 ``` 
 
 Change into the directory: 
