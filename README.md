@@ -3,16 +3,21 @@ Script to use the Stable Diffusion AI to create an image from a textual descript
 
 ## Disclaimers
 
-This script is without bells and whistles and has been used:
-- on a Linux operating system 
-- with Python 3.9.7 
-- together with Nvidia GPU RTX 3060 (12 GB GPU RAM)
-- and 15 GB RAM.
+This script is without bells and whistles. But it has some features like:
+- Collecting images in a directory and store accompanying information in a CSV file.  
+
+I have used this script:
+- On a Linux operating system 
+- With Python 3.9.7 
+- Together with Nvidia GPU RTX 3060 (12 GB GPU RAM)
+- And 15 GB RAM.
 
 **Note**: If the process of generating the image dies then it was running out of memory. Maybe closing some other programs can free 
 enough memory to avoid it. Observe your memory with **htop** or **top** when necessary.
 
 ## Prerequisites
+
+Before pulling files from obscure internet sources it is worthwhile to follow the instructions of the original Stable Diffuser project. There are not too many steps to accomplish and it is easily done.
 
 1. Register at https://huggingface.co/ and confirm your registration with the link sent by email.
 2. Login to huggingface.co and access the AI model: https://huggingface.co/CompVis/stable-diffusion-v1-4
@@ -26,7 +31,7 @@ Now you are ready for your the command line. This script expects that your compu
 
 Download this repository from Github:
 ```
-git clone https://github.com/nullpointer-io/tryout-stablediffusion.git
+git clone https://github.com/nullpointer-io/stablediffusion.git
 ``` 
 
 Change into the directory: 
@@ -91,7 +96,7 @@ The image quality and output can be controlled by parameters:
 
 Example:
 ```
-./text2image.py "a chair in the shape of an avacadoe" --steps=50 --scale=2.5 --manualseed=False
+./text2image.py "a chair in the shape of an avacado" --steps=50 --scale=2.5 --manualseed=False
 ```
 In reference [^2] the parameters are described in detail. 
 
