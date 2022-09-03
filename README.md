@@ -1,10 +1,11 @@
 # stablediffusion
-Script to use the Stable Diffusion AI to create an image from a textual description.
+Scripts to use the Stable Diffusion AI to create images from a textual description.
 
 ## Disclaimers
 
 This script is without bells and whistles. But it has some features like:
 - Collecting images in a directory and store accompanying information in a CSV file.  
+- A companion script for scaling the created images.
 
 I have used this script:
 - On a Linux operating system 
@@ -72,6 +73,7 @@ b. Create an image with a GPU less than 10 GB RAM.
 ```
 ./text2image.py "a chair in the shape of an avacado" --over10gb=False
 ```
+To scale the image with AI support use image2scale.py. See related chapter
 
 ### Output
 
@@ -99,6 +101,25 @@ Example:
 ./text2image.py "a chair in the shape of an avacado" --steps=50 --scale=2.5 --manualseed=False
 ```
 In reference [^2] the parameters are described in detail. 
+
+## Scale the Images
+
+Use the script `image2scale.py` to increase the size of images with the help of the AI. 
+At the first run the models are downloaded. The integrity of the downloaded models is verified 
+by hash. The expected hashes and source URL are configured in `share/models.py`.
+
+The script `image2scale.py` is some sort of wrapper around the original script:
+https://raw.githubusercontent.com/xinntao/Real-ESRGAN/v0.2.5.0/inference_realesrgan.py 
+Adding the integrity check and adapting the output paths to this project. 
+Note: The code of the original script are the functions main and parse_args.
+
+In the most cases you only have to execute:
+```
+./image2scale.py -i collected/00001-a-chair-in-the-shape-of-an-avacado.png
+```
+The result wil be stored the sub directory `scaled`. 
+
+Execute the script with `-h` to inspect possible arguments.
 
 ## References
 
