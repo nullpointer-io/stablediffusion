@@ -104,9 +104,9 @@ In reference [^2] the parameters are described in detail.
 
 ## Scale the Images
 
-Use the script `image2scale.py` to increase the size of images with the help of the AI. 
-At the first run the models are downloaded. The integrity of the downloaded models is verified 
-by hash. The expected hashes and source URL are configured in `share/models.py`.
+Use the script `image2scale.py` to increase the size of images with AI support. 
+At the first run the models are downloaded. The integrity of the models is verified 
+by hash. The expected hashes and source URLs are configured in `share/models.py`.
 
 The script `image2scale.py` is some sort of wrapper around the original script:
 https://raw.githubusercontent.com/xinntao/Real-ESRGAN/v0.2.5.0/inference_realesrgan.py 
