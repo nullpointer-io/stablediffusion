@@ -5,7 +5,7 @@ Scripts to use the Stable Diffusion AI to create images from a textual descripti
 
 This script is without bells and whistles. But it has some features like:
 - Collecting images in a directory and store accompanying information in a CSV file.  
-- A companion script for scaling the created images.
+- A companion script for scaling the created images also with AI support.
 
 I have used this script:
 - On a Linux operating system 
