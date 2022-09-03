@@ -7,7 +7,7 @@ This script is without bells and whistles. But it has some features like:
 - Collecting images in a directory and store accompanying information in a CSV file.  
 - A companion script for scaling the created images also with AI support.
 
-I have used this script:
+I have used these scripts:
 - On a Linux operating system 
 - With Python 3.9.7 
 - Together with Nvidia GPU RTX 3060 (12 GB GPU RAM)
