@@ -1,21 +1,26 @@
 #!/usr/bin/env python3
 
+import os
+os.environ['PYTORCH_CUDA_ALLOC_CONF']='max_split_size_mb:128'
+
 import csv
 from pathlib import Path
 import re
-import shutil
-from time import localtime, strftime, time 
+from time import time 
 
 from diffusers import StableDiffusionPipeline
 import fire
 import pandas as pd
 import torch
+torch.cuda.empty_cache()
 import unicodedata
+
 
 MODEL = "CompVis/stable-diffusion-v1-4"
 GPU = "cuda"
 CSV_FILENAME = "stablediffusion.info.csv"
 OUTDIR = Path.cwd() / 'collected'
+
 
 def get_imgfile_from_prompt(idx, textinput):
     return OUTDIR / f"{idx:05}-{slugify(textinput)}.png"
@@ -84,6 +89,7 @@ def main(textinput, steps=15, manualseed=True, seed=1024, scale=7.5, over10gb=Tr
 
     if not manualseed:
         generator = torch.Generator(GPU).seed() # pylint: disable=no-member
+        params['seed'] = generator
     else:
         generator = torch.Generator(GPU).manual_seed(seed)  # pylint: disable=no-member
     pipe = StableDiffusionPipeline.from_pretrained(MODEL, generator=generator, use_auth_token=True, **params)

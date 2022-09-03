@@ -6,3 +6,4 @@ ftfy
 pandas
 scipy
 transformers
+realesrgan==0.2.5

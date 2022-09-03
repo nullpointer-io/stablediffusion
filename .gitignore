@@ -1,0 +1,9 @@
+share/gfpgan/**
+!share/gfpgan/.gitkeep
+share/realesrgan/**
+!share/realesrgan/.gitkeep
+collected/**
+!collected/.gitkeep
+scaled/**
+!scaled/.gitkeep
+
